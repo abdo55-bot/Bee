@@ -1,0 +1,16 @@
+.google {
+    .LgbsSe-Bz112c {
+        display: none;
+        background-color: #000;
+    }
+}
+
+
+
+.main-auth-input-parent{
+    @apply  flex items-center gap-1 w-96 rounded-md bg-[#30313D] py-2 px-2;
+
+    .form-input{
+        @apply bg-[rgb(48,49,61)] w-full h-full text-right outline-none focus:outline-none text-grey
+    }
+}
