@@ -36,8 +36,8 @@ const CTA = () => {
                                 <Link to="/eventDetails/1" className='rounded-full flex items-center text-white bg-primary font-medium  px-12 shadow-main '>
                                     اذهب الى الدورة
                                 </Link>
-                                <button className={`rounded-full w-14 h-14 bg-white flex justify-center items-center  font-medium ${dark ? 'text-black' : 'text-white'}`} >
-                                     <BsBookmark  className={ `text-2xl ${ dark ? 'text-black' : 'text-white'} ` }/>
+                                <button className={`rounded-full w-14 h-14 bg-white flex justify-center items-center  font-medium `} >
+                                     <BsBookmark  className={ `text-2xl text-black ` }/>
                                  </button>
                             </div>
                         </div>
