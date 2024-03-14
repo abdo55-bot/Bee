@@ -16,7 +16,7 @@ const Course = ({ status, img, title, videos, time, description, presenter }) =>
             <div className={`status absolute top-2 z-20 right-2 rounded-md bg-primary py-1 px-2 ${dark ? `` : 'text-white'}`}>
                 {status}
             </div>
-            <img src={img} alt="" className='rounded-md' />
+            <img src={img} alt="" className='rounded-md hover:scale-105 duration-150 cursor-pointer' />
             <div className={`content flex flex-col justify-between items-end px-4 text-right 
          gap-2 ${dark ? 'text-grey' : 'text-black bg-[#F5F5F5] rounded-b-md'} `}>
 
@@ -29,7 +29,7 @@ const Course = ({ status, img, title, videos, time, description, presenter }) =>
                 <div className='presenter text-sm text-right '>{presenter}</div>
                 <div className="flex justify-between items-center w-full">
                     <div className={`bookmark w-8 h-8 flex justify-center items-center rounded-full
-             ${dark ? 'bg-white text-black' : 'text-black bg-grey font-bold'} cursor-pointer`}>
+             ${dark ? 'bg-white text-black' : 'text-black bg-grey font-bold'} cursor-pointer hover:bg-primary transition duration-100`}>
                         <BsBookmark className={dark ? '' : 'font-bold'} />
                     </div>
                     <div className="rating">
@@ -45,7 +45,7 @@ const Course = ({ status, img, title, videos, time, description, presenter }) =>
                     </div>
                 </div>
                 <div className="reserve flex justify-center items-center w-full py-5">
-                    <Link to="/courseDetails" className='bg-primary rounded-full py-1 font-normal px-5 shadow text-white  shadow-black' >احجز الان</Link>
+                    <Link to="/courseDetails" className='bg-primary rounded-full py-1 font-normal px-5 shadow text-white  shadow-black hover:scale-105 duration-150' >احجز الان</Link>
                 </div>
 
             </div>
