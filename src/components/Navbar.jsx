@@ -1,4 +1,4 @@
-import React, { useContext, useEffect } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { MdDarkMode } from 'react-icons/md';
 import { GiHamburgerMenu } from 'react-icons/gi';
@@ -28,12 +28,28 @@ const Navbar = () => {
         localStorage.removeItem('userAuth');
     }
 
+    const [navbar,setnavbar]=useState(false);
+    const onscrol=()=>{
+        if(window.scrollY>30){
+            setnavbar(true);
+        }else{
+            setnavbar(false);
+        }
+        
+    }
+    useEffect(()=>{
+        window.addEventListener('scroll', onscrol);
+        return ()=>{
+            window.removeEventListener('scroll', onscrol);
+        }
+    },[])
+
     return (
 
-        <Disclosure as="nav" className={dark ? 'bg-black text-white' : 'bg-white text-black'}  >
+        <Disclosure as="nav" className={`${dark ? 'bg-black text-white ' : 'bg-white text-black '} sticky top-0 z-10  ${navbar&&'shadow-lg transition duration-150'}`}  >
             {({ open }) => (
                 <>
-                    <div className="mx-auto max-w-7xl px-2 py-2 sm:px-6 lg:px-8 container">
+                    <div className="mx-auto max-w-7xl px-2 py-2 sm:px-6 lg:px-8 container ">
                         <div className="relative flex flex-row-reverse h-16 items-center justify-between">
                             <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
                                 {/* Mobile menu button*/}
@@ -51,7 +67,7 @@ const Navbar = () => {
                             <div className="flex  items-center justify-center sm:items-stretch sm:justify-start">
                                 <div className="hidden sm:ml-6 sm:block">
                                     <div className="flex  gap-5 text-xl flex-row-reverse">
-                                        <Link href="#" ><img src="img/logo.png" width={60} alt="" /></Link>
+                                        <Link href="#" ><img src="img/logo.png" width={60} alt="logo/img"  /></Link>
                                         {navigation.map((item) => (
                                             <Link
                                                 key={item.name}
