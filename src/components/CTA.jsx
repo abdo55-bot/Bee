@@ -24,7 +24,7 @@ const CTA = () => {
                             <div className="flex flex-row-reverse  justify-start gap-2 text-2xl   ">
                                 <img className='w-14 h-14 rounded-full ' src="img/video.png" alt="" />
                                 <div className="info flex justify-center flex-col ">
-                                    <div className="name text-lg font-semibold">احمد محموج</div>
+                                    <div className="name text-lg font-semibold">احمد محمود</div>
                                     <div className={dark ? "title text-sm text-grey": 'title text-sm text-black' } >خبير فى التسويق الالكترونى</div>
                                 </div>
                             </div>
@@ -33,7 +33,7 @@ const CTA = () => {
                             </div>
                             <div className="buttons flex flex-row-reverse gap-5 text-center justify-center w-full mt-2 ">
 
-                                <Link to="/eventDetails/1" className='rounded-full leading-10 text-white bg-primary font-medium  px-12 shadow-main '>
+                                <Link to="/eventDetails/1" className='rounded-full flex items-center text-white bg-primary font-medium  px-12 shadow-main '>
                                     اذهب الى الدورة
                                 </Link>
                                 <button className={`rounded-full w-14 h-14 bg-white flex justify-center items-center  font-medium ${dark ? 'text-black' : 'text-white'}`} >
