@@ -14,11 +14,11 @@ const Footer = () => {
 
           <div className='social'>
             <ul className='flex justify-between gap-2 items-center  text-4xl'>
-              <li><Link to="https://www.tiktok.com/@bee.knowledge"> <FaTiktok /></Link></li>
-              <li><Link to="https://www.facebook.com/profile.php?id=100091523964308"> <FaFacebookSquare /></Link></li>
-              <li><Link to="https://www.linkedin.com/in/bee-undefined-060836290/" > <FaLinkedin /></Link></li>
-              <li><Link to="https://www.youtube.com/channel/UCWO3TX4cQc9DCBhbAGMsn3Q" > <FaSquareYoutube /></Link></li>
-              <li><Link to="https://www.instagram.com/beezz.co/?hl=en" > <FaInstagramSquare /></Link></li>
+              <li className='hover:scale-75 duration-150'><Link to="https://www.tiktok.com/@bee.knowledge"> <FaTiktok /></Link></li>
+              <li className='hover:scale-75 duration-150'><Link to="https://www.facebook.com/profile.php?id=100091523964308"> <FaFacebookSquare /></Link></li>
+              <li className='hover:scale-75 duration-150'><Link to="https://www.linkedin.com/in/bee-undefined-060836290/" > <FaLinkedin /></Link></li>
+              <li className='hover:scale-75 duration-150'><Link to="https://www.youtube.com/channel/UCWO3TX4cQc9DCBhbAGMsn3Q" > <FaSquareYoutube /></Link></li>
+              <li className='hover:scale-75 duration-150'><Link to="https://www.instagram.com/beezz.co/?hl=en" > <FaInstagramSquare /></Link></li>
             </ul>
           </div>
 
