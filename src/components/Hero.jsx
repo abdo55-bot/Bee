@@ -23,7 +23,7 @@ const Hero = () => {
                         </div>
                         <Link to='/login'
                             className=' shadow-main  h-[70px] leading-snug text-3xl bg-primary text-white rounded-full py-2 px-5 text-center font-bold 
-                     w-[250px] mx-auto'>ابدأ الان</Link>
+                     w-[250px] mx-auto hover:scale-105 duration-150'>ابدأ الان</Link>
                     </div>
                 </div>
             </div>
