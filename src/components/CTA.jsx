@@ -33,7 +33,7 @@ const CTA = () => {
                             </div>
                             <div className="buttons flex flex-row-reverse gap-5 text-center justify-center w-full mt-2 ">
 
-                                <Link to="/eventDetails/1" className='rounded-full flex items-center text-white bg-primary font-medium  px-12 shadow-main '>
+                                <Link to="/eventDetails/1" className='rounded-full flex items-center text-white bg-primary font-medium  px-12 shadow-main hover:scale-105 duration-150 '>
                                     اذهب الى الدورة
                                 </Link>
                                 <button className={`rounded-full w-14 h-14 bg-white flex justify-center items-center  font-medium hover:bg-primary duration-150`} >

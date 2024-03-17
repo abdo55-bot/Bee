@@ -29,7 +29,7 @@ const Event = ({ status, img, title, videos, time, description, presenter }) => 
         <div className='presenter text-sm text-right '>{presenter}</div>
         <div className="flex justify-between items-center w-full">
           <div className={`bookmark w-8 h-8 flex justify-center items-center rounded-full
-           ${dark ? 'bg-white text-black': 'text-black bg-grey font-bold' } cursor-pointer`}>
+           ${dark ? 'bg-white text-black': 'text-black bg-grey font-bold' } cursor-pointer hover:bg-primary duration-150`}>
             <BsBookmark className={dark ? '': 'font-bold'} />
           </div>
           <div className="rating">
@@ -44,7 +44,7 @@ const Event = ({ status, img, title, videos, time, description, presenter }) => 
             />
           </div>
         </div>
-        <div className="reserve flex justify-center items-center w-full py-5">
+        <div className="reserve flex justify-center items-center w-full py-5 hover:scale-105 duration-150">
           <Link to="/eventDetails" className='bg-primary rounded-full py-1 font-normal px-5 shadow text-white  shadow-black' >احجز الان</Link>
         </div>
 
