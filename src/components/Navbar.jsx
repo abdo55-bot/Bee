@@ -46,7 +46,7 @@ const Navbar = () => {
 
     return (
 
-        <Disclosure as="nav" className={`${dark ? 'bg-black text-white ' : 'bg-white text-black '} sticky top-0 z-10  ${navbar&&'shadow-lg transition duration-150'}`}  >
+        <Disclosure as="nav" className={`${dark ? 'bg-black text-white ' : 'bg-white text-black '} sticky top-0 z-30  ${navbar&&'shadow-lg transition duration-150'}`}  >
             {({ open }) => (
                 <>
                     <div className="mx-auto max-w-7xl px-2 py-2 sm:px-6 lg:px-8 container ">

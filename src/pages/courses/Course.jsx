@@ -16,7 +16,7 @@ const Course = ({ status, img, title, videos, time, description, presenter }) =>
             <div className={`status absolute top-2 z-20 right-2 rounded-md bg-primary py-1 px-2 ${dark ? `` : 'text-white'}`}>
                 {status}
             </div>
-            <img src={img} alt="" className='rounded-md hover:scale-105 duration-150 cursor-pointer' />
+            <img src={img} alt="events/img" className='rounded-md  cursor-pointer' />
             <div className={`content flex flex-col justify-between items-end px-4 text-right 
          gap-2 ${dark ? 'text-grey' : 'text-black bg-[#F5F5F5] rounded-b-md'} `}>
 
