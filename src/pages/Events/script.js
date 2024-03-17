@@ -1,32 +1,32 @@
 export const eventsList = [
     {
-        img: 'img/video.png', title: 'hello world', video: 20, time: '1h 25min',
-        description: 'hello from event description helo from event ddescription', status: ['free', 'new'], presenter: 'ahmed',
+         img: 'img/video.png', title: 'اهلا بك', video: 20, time: '15ساعه 1 دقيقه',
+        description: 'مرحبًا من وصف الحدث، مرحبًا من وصف الحدث', status: ['free', 'new'], presenter: 'ahmed',
         rating: 85
     },
     {
-        img: 'img/video.png', title: 'hello world', video: 20, time: '1h 25min',
-        description: 'hello from event description helo from event ddescription', status: ['free', 'new'], presenter: 'ahmed',
+         img: 'img/video.png', title: 'اهلا بك', video: 20, time: '15ساعه 1 دقيقه',
+        description: 'مرحبًا من وصف الحدث، مرحبًا من وصف الحدث', status: ['free', 'new'], presenter: 'ahmed',
         rating: 85
     },
     {
-        img: 'img/video.png', title: 'hello world', video: 20, time: '1h 25min',
-        description: 'hello from event description helo from event ddescription', status: ['free', 'new'], presenter: 'ahmed',
+         img: 'img/video.png', title: 'اهلا بك', video: 20, time: '15ساعه 1 دقيقه',
+        description: 'مرحبًا من وصف الحدث، مرحبًا من وصف الحدث', status: ['free', 'new'], presenter: 'ahmed',
         rating: 85
     },
     {
-        img: 'img/video.png', title: 'hello world', video: 20, time: '1h 25min',
-        description: 'hello from event description helo from event ddescription', status: ['free', 'new'], presenter: 'ahmed',
+         img: 'img/video.png', title: 'اهلا بك', video: 20, time: '15ساعه 1 دقيقه',
+        description: 'مرحبًا من وصف الحدث، مرحبًا من وصف الحدث', status: ['free', 'new'], presenter: 'ahmed',
         rating: 85
     },
     {
-        img: 'img/video.png', title: 'hello world', video: 20, time: '1h 25min',
-        description: 'hello from event description helo from event ddescription', status: ['free', 'new'], presenter: 'ahmed',
+         img: 'img/video.png', title: 'اهلا بك', video: 20, time: '15ساعه 1 دقيقه',
+        description: 'مرحبًا من وصف الحدث، مرحبًا من وصف الحدث', status: ['free', 'new'], presenter: 'ahmed',
         rating: 85
     },
     {
-        img: 'img/video.png', title: 'hello world', video: 20, time: '1h 25min',
-        description: 'hello from event description helo from event ddescription', status: ['free', 'new'], presenter: 'ahmed',
+         img: 'img/video.png', title: 'اهلا بك', video: 20, time: '15ساعه 1 دقيقه',
+        description: 'مرحبًا من وصف الحدث، مرحبًا من وصف الحدث', status: ['free', 'new'], presenter: 'ahmed',
         rating: 85
     },
 ]
