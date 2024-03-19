@@ -1,7 +1,8 @@
 import { useContext } from "react";
-import { BsBookmark } from "../helpers/icons";
 import { DarkThemeContext } from "../context/DarkTheme";
 import Checkbox from "@mui/material/Checkbox";
+import BookmarkBorderIcon from "@mui/icons-material/BookmarkBorder";
+import BookmarkIcon from "@mui/icons-material/Bookmark";
 import { Link } from "react-router-dom";
 
 const CTA = () => {
@@ -63,12 +64,17 @@ const CTA = () => {
 								>
 									اذهب الى الدورة
 								</Link>
-								<Checkbox></Checkbox>
-								<button
-									className={`rounded-full w-14 h-14 bg-white flex justify-center items-center  font-medium hover:bg-primary duration-150`}
-								>
-									<BsBookmark className={`text-2xl text-black  `} />
-								</button>
+								<Checkbox
+									className={`w-14 h-14`}
+									aria-label="save"
+									size="large"
+									icon={
+										<BookmarkBorderIcon
+											className={`${dark ? "text-white" : "text-black"}`}
+										/>
+									}
+									checkedIcon={<BookmarkIcon />}
+								/>
 							</div>
 						</div>
 					</div>
