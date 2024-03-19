@@ -29,6 +29,7 @@ const CourseList = () => {
                         navigation
                         pagination={{ clickable: true }}
                         scrollbar={{ draggable: true }}
+                        
                       
                         breakpoints={{
                             425: {

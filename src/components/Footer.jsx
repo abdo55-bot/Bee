@@ -6,6 +6,12 @@ import { DarkThemeContext } from '../context/DarkTheme';
 
 const Footer = () => {
   const { dark} = useContext(DarkThemeContext);
+  const handleScrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  };
 
   return (
     <div className={ `footer py-5 ${dark   ? 'bg-lightBlack' : 'bg-lightGrey' } flex `}>
@@ -14,25 +20,29 @@ const Footer = () => {
 
           <div className='social'>
             <ul className='flex justify-between gap-2 items-center  text-4xl'>
-              <li><Link to="https://www.tiktok.com/@bee.knowledge"> <FaTiktok /></Link></li>
-              <li><Link to="https://www.facebook.com/profile.php?id=100091523964308"> <FaFacebookSquare /></Link></li>
-              <li><Link to="https://www.linkedin.com/in/bee-undefined-060836290/" > <FaLinkedin /></Link></li>
-              <li><Link to="https://www.youtube.com/channel/UCWO3TX4cQc9DCBhbAGMsn3Q" > <FaSquareYoutube /></Link></li>
-              <li><Link to="https://www.instagram.com/beezz.co/?hl=en" > <FaInstagramSquare /></Link></li>
+              <li className='hover:scale-75 duration-150'><Link to="https://www.tiktok.com/@bee.knowledge"> <FaTiktok /></Link></li>
+              <li className='hover:scale-75 duration-150'><Link to="https://www.facebook.com/profile.php?id=100091523964308"> <FaFacebookSquare /></Link></li>
+              <li className='hover:scale-75 duration-150'><Link to="https://www.linkedin.com/in/bee-undefined-060836290/" > <FaLinkedin /></Link></li>
+              <li className='hover:scale-75 duration-150'><Link to="https://www.youtube.com/channel/UCWO3TX4cQc9DCBhbAGMsn3Q" > <FaSquareYoutube /></Link></li>
+              <li className='hover:scale-75 duration-150'><Link to="https://www.instagram.com/beezz.co/?hl=en" > <FaInstagramSquare /></Link></li>
             </ul>
           </div>
 
           <div className="flex justify-center items-center ">
-            <Link  to="/terms">
-              <div className="text-3xl">سياسة الخصوصية</div>
+            <Link  to="/terms" className='hover:underline'>
+              <div className="text-3xl ">سياسة الخصوصية</div>
             </Link>
           </div>
           <div className="we">
-            <Link >
-              <div className="text-3xl">من نحن</div>
+            <Link className='hover:underline'>
+              <div className="text-3xl ">من نحن</div>
             </Link>
           </div>
+        
         </div>
+        <div className='mt-5 text-center ' >
+            <p className='text-sm md:text-center sm:pr-6 cursor-pointer' onClick={handleScrollToTop}>Copyright<span className='text-base font-bold'>&copy;</span> All Reserved Rights <span className='font-semibold'>Bee </span></p>
+          </div>
       </div>
     </div>
   )
