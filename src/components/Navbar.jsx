@@ -6,7 +6,6 @@ import { HiOutlineXMark } from 'react-icons/hi2';
 import { Disclosure, Menu } from '@headlessui/react'
 import { DarkThemeContext } from '../context/DarkTheme';
 import {  useAuth } from '../context/Auth.jsx';
-
 function classNames(...classes) {
     return classes.filter(Boolean).join(' ')
 }
@@ -49,8 +48,8 @@ const Navbar = () => {
         <Disclosure as="nav" className={`${dark ? 'bg-black text-white ' : 'bg-white text-black '} sticky top-0 z-30  ${navbar&&'shadow-lg transition duration-150'}`}  >
             {({ open }) => (
                 <>
-                    <div className="mx-auto max-w-7xl px-2 py-2 sm:px-6 lg:px-8 container ">
-                        <div className="relative flex flex-row-reverse h-16 items-center justify-between">
+                    <div className="mx-auto max-w-7xl px-2 py-2 sm:px-6  lg:px-8 container ">
+                        <div className="relative flex flex-row-reverse  h-16 items-center justify-between ">
                             <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
                                 {/* Mobile menu button*/}
                                 <Disclosure.Button className="relative inline-flex items-center justify-center rounded-md p-2
@@ -87,7 +86,7 @@ const Navbar = () => {
                                                 sm:translate-x-0
                                                 sm:inset-auto  sm:pr-0">
 
-                                <Menu as="div" className="relative ml-3">
+                                <Menu as="div" className="relative ml-9">
                                     <div className="left w-[220px] sm:w-auto flex gap-2 text-sm md:text-xl justify-between items-center">
                                         {!isLogged ? (
                                             <>
