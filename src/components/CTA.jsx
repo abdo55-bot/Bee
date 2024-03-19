@@ -23,7 +23,7 @@ const CTA = () => {
 						className={`right h-auto  md:w-[40%] w-full text-center  md:text-right flex flex-col justify-between gap-4  py-6 `}
 					>
 						<div
-							className={`leading-5 text-5xl font-normal ${
+							className={`leading-2 text-5xl font-normal ${
 								dark ? "text-white" : "text-black"
 							} `}
 						>
