@@ -29,7 +29,7 @@ const CTA = () => {
 						>
 							التسويق الرقمى
 						</div>
-						<div className="content flex flex-col gap-4 text-right mt-10 items-center md:items-end">
+						<div className="content flex flex-col gap-4 text-center mt-10 items-center md:items-end">
 							<div className="flex flex-row-reverse  justify-start gap-2 text-2xl   ">
 								<img
 									className="w-14 h-14 rounded-full "
