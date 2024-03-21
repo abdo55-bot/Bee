@@ -52,15 +52,15 @@ const CourseList = () => {
                             },
                           }}
                     >
-                        <div className="header mt-2 absolute left-0 top-0 z-20 flex items-end sm:items-center 
+                        <div className="header mt-2 absolute left-0 top-0 z-20 flex items-center sm:items-center 
                         justify-between w-full mb-10">
-                            <div className="left navs flex w-[100px] justify-between gap-2 items-center">
+                            <div className="left navs flex  justify-between gap-2 items-center">
                                 <div className="nav-left h-10 rounded-full p-2">
                                     <SwiperButtonNext>
                                         <BsArrowLeftCircle className='text-5xl cursor-pointer' />
                                     </SwiperButtonNext>
                                 </div>
-                                <div className="nav-left  h-10 rounded-full p-2">
+                                <div className="nav-left h-10  rounded-full p-2">
                                     <SwiperButtonPrev>
 
                                         <BsArrowRightCircle className='text-5xl cursor-pointer' />
@@ -68,7 +68,7 @@ const CourseList = () => {
                                 </div>
                             </div>
                             <div className="right">
-                                <div className="leading-5 text-2xl md:text-5xl font-bold hover:underline">
+                                <div className="leading-8 text-3xl md:text-5xl  font-bold hover:underline text-end">
                                     <Link to="/courseFeed">  شاهد كل المجتمعات </Link> 
                                 </div>
                             </div>
