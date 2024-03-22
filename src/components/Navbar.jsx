@@ -7,6 +7,7 @@ import { Disclosure, Menu } from '@headlessui/react'
 import { DarkThemeContext } from '../context/DarkTheme';
 import {  useAuth } from '../context/Auth.jsx';
 import '../styles/nav.css'
+import { useTranslation } from 'react-i18next';
 function classNames(...classes) {
     return classes.filter(Boolean).join(' ')
 }
@@ -20,6 +21,7 @@ const navigation = [
 const Navbar = () => {
     const { authUSer, setAuthUser, isLogged, setIsLogged } = useAuth();
     const { dark, setDark } = useContext(DarkThemeContext);
+    
 
 
     const logout = () => {
@@ -43,6 +45,8 @@ const Navbar = () => {
             window.removeEventListener('scroll', onscrol);
         }
     },[])
+
+    const {t}=useTranslation();
 
     return (
 
@@ -68,14 +72,20 @@ const Navbar = () => {
                                 <div className="hidden sm:ml-6 sm:block">
                                     <div className="flex  gap-5 text-xl flex-row-reverse">
                                         <Link href="#" ><img src="img/logo.png" width={60} alt="logo/img"  /></Link>
-                                        {navigation.map((item) => (
+                                       
                                             <Link
-                                                key={item.name}
-                                                to={item.href}
+                                               
+                                                to={'/'}
                                             >
-                                                {item.name}
+                                            {t('Home')}
                                             </Link>
-                                        ))}
+                                            <Link
+                                               
+                                               to={'tickets'}
+                                           >
+                                           {t('tickets')}
+                                           </Link>
+                                        
                                     </div>
                                 </div>
                             </div>
@@ -91,8 +101,8 @@ const Navbar = () => {
                                     <div className="left w-[220px] sm:w-auto flex gap-2 text-sm md:text-xl justify-between items-center">
                                         {!isLogged ? (
                                             <>
-                                            <Link to="/login" className='rounded-md p-2 md:p-1'>تسجيل دخول</Link>
-                                            <Link to="/register" className={`rounded-md p-2 md:p-1 border ${ dark ? 'border-white' : 'border-black'} `}>إنشاء حساب</Link>
+                                            <Link to="/login" className='rounded-md p-2 md:p-1'>{t('login')}</Link>
+                                            <Link to="/register" className={`rounded-md p-2 md:p-1 border ${ dark ? 'border-white' : 'border-black'} `}> {t('createaccount')}</Link>
                                             </>
                                         ): (
                                             <button className={`rounded-md p-2 md:p-1 border ${ dark ? 'border-white' : 'border-black'} `} 

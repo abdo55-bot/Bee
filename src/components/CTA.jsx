@@ -4,9 +4,13 @@ import Checkbox from "@mui/material/Checkbox";
 import BookmarkBorderIcon from "@mui/icons-material/BookmarkBorder";
 import BookmarkIcon from "@mui/icons-material/Bookmark";
 import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
+
+
 
 const CTA = () => {
 	const { dark } = useContext(DarkThemeContext);
+const {t} =useTranslation();
 
 	return (
 		<div className="cta my-20 ">
@@ -27,8 +31,7 @@ const CTA = () => {
 								dark ? "text-white" : "text-black"
 							} `}
 						>
-							التسويق الرقمى
-						</div>
+            						{t("DigitalMarketing")}						</div>
 						<div className="content flex flex-col gap-4 text-center mt-10 items-center md:items-end">
 							<div className="flex flex-row-reverse  justify-start gap-2 text-2xl   ">
 								<img
@@ -37,7 +40,7 @@ const CTA = () => {
 									alt=""
 								/>
 								<div className="info flex justify-center flex-col ">
-									<div className="name text-lg font-semibold">احمد محمود</div>
+									<div className="name text-lg font-semibold"> {t('Ahmedmahmoud')}</div>
 									<div
 										className={
 											dark
@@ -45,7 +48,7 @@ const CTA = () => {
 												: "title text-sm text-black"
 										}
 									>
-										خبير فى التسويق الالكترونى
+										{t('Expertinelectronicmarketing')}
 									</div>
 								</div>
 							</div>
@@ -54,15 +57,14 @@ const CTA = () => {
 									dark ? "text-grey" : "text-black"
 								}`}
 							>
-								احترف التسويق الرقمى و عزز مسارك المهنى بامتلاك المهارة الاكثر
-								طلبا فى سوق العمل
+							{t('MasterdigitalmarketingandenhanceyourcareerpathbypossessingthemostskillsDemandinthelabormarket')}
 							</div>
 							<div className="buttons flex flex-row-reverse gap-5 text-center justify-center w-full mt-2 ">
 								<Link
 									to="/eventDetails/1"
 									className="rounded-full flex items-center text-white bg-primary font-medium  px-12 shadow-main hover:scale-105 duration-150 "
 								>
-									اذهب الى الدورة
+									{t('Gotothecourse')}
 								</Link>
 								<Checkbox
 									className={`w-14 h-14`}

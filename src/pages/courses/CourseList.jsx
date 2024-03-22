@@ -9,9 +9,11 @@ import SwiperButtonPrev from '../Events/SwiperPrev';
 import { courseList } from './script';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
+import { useTranslation } from 'react-i18next';
 
 const CourseList = () => {
     const { dark}= useContext(DarkThemeContext);
+    const {t}=useTranslation();
     useEffect(() => {
         return async () => {
             let res  = await axios.get(`${import.meta.env.VITE_BASE_URL}/courses`);
@@ -69,7 +71,7 @@ const CourseList = () => {
                             </div>
                             <div className="right">
                                 <div className="leading-8 text-3xl md:text-5xl  font-bold hover:underline text-end">
-                                    <Link to="/courseFeed">  شاهد كل المجتمعات </Link> 
+                                    <Link to="/courseFeed">  {t('Viewallcommunities')}  </Link> 
                                 </div>
                             </div>
                         </div>

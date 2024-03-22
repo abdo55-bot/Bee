@@ -12,12 +12,14 @@ import { Link } from 'react-router-dom';
 import { useEffect } from 'react';
 import { useState } from 'react';
 import axios from 'axios';
+import { useTranslation } from 'react-i18next';
 
 
 
 const EventList = () => {
     const { dark } = useContext(DarkThemeContext);
     const [Events, setEvent] = useState([]);
+    const {t}=useTranslation();
 
     useEffect(() => {
 
@@ -84,7 +86,7 @@ const EventList = () => {
                             </div>
                             <div className="right">
                                 <div className="leading-5 text-2xl md:text-5xl font-bold hover:underline">
-                                    <Link to="/eventFeed">   شاهد كل الاحداث </Link>
+                                    <Link to="/eventFeed">   {t('Watchalltheevents')} </Link>
                                 </div>
                             </div>
                         </div>
