@@ -84,7 +84,7 @@ const CourseList = () => {
                                 </div>
                             </div>
                             <div className="right">
-                                <div className="leading-8 text-3xl md:text-5xl  font-bold hover:underline text-end">
+                                <div className="leading-8 text-2xl md:text-5xl  font-bold hover:underline text-end">
                                     <Link to="/courseFeed">  {t('Viewallcommunities')}  </Link> 
                                 </div>
                             </div>

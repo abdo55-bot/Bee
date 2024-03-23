@@ -94,7 +94,7 @@ const EventList = () => {
                                 </div>
                             </div>
                             <div className="right">
-                                <div className="leading-5 text-2xl md:text-5xl font-bold hover:underline">
+                                <div className="leading-5 text-2xl text-end md:text-5xl font-bold hover:underline">
                                     <Link to="/eventFeed">   {t('Watchalltheevents')} </Link>
                                 </div>
                             </div>

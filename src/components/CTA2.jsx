@@ -26,9 +26,9 @@ const CTA2 = () => {
 						className={`right h-auto  md:w-[48%] w-full text-center md:text-right flex flex-col justify-between gap-4  py-6 `}
 					>
 						<div
-							className={`leading-2 text-center font-normal ${
+							className={`leading-2 text-center text-3xl font-normal ${
 								dark ? "text-white" : "text-black"
-							} ${i18n.language== 'en' ?'text-5xl':'text-5xl'}`}
+							} ${i18n.language== 'en' ?'text-3xl':'text-5xl'}`}
 						>
 							{t("DigitalMarketing")}
 						</div>
