@@ -1,5 +1,5 @@
 import Course from './Course'
-import { useContext, useEffect } from 'react';
+import { useContext, useEffect, useState } from 'react';
 import { BsArrowRightCircle, BsArrowLeftCircle } from '../../helpers/icons'
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination, Scrollbar, A11y } from 'swiper/modules';
@@ -9,17 +9,29 @@ import SwiperButtonPrev from '../Events/SwiperPrev';
 import { courseList } from './script';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
+import { Swiper as SwiperInstance } from 'swiper'
 import { useTranslation } from 'react-i18next';
 
 const CourseList = () => {
     const { dark}= useContext(DarkThemeContext);
     const {t}=useTranslation();
+    const {i18n}=useTranslation();
+    
     useEffect(() => {
         return async () => {
             let res  = await axios.get(`${import.meta.env.VITE_BASE_URL}/courses`);
             console.log(res)
         }
     }, [])
+
+    const [swiper, setSwiper] = useState(null)
+    useEffect(() => {
+      if (swiper) {
+        swiper.rtlTranslate = i18n?.dir() === 'rtl'
+      }
+    }, [swiper, i18n?.dir()])
+
+    
     return (
         <div className={`coursesFeed flex flex-col ${dark ? 'bg-black ' : 'bg-white '} py-5 relative`}>
             <div className="container">
@@ -31,6 +43,8 @@ const CourseList = () => {
                         navigation
                         pagination={{ clickable: true }}
                         scrollbar={{ draggable: true }}
+                        onSwiper={(swiper) => setSwiper(swiper)}
+                        
                         
                       
                         breakpoints={{
@@ -48,7 +62,7 @@ const CourseList = () => {
                             },
                             // when window width is >= 992px
                             992: {
-                              slidesPerView: 4,
+                              slidesPerView: 3,
                               spaceBetween: 30,
                               width: 1200
                             },
@@ -57,7 +71,7 @@ const CourseList = () => {
                         <div className="header mt-2 absolute left-0 top-0 z-20 flex items-center sm:items-center 
                         justify-between w-full mb-10">
                             <div className="left navs flex  justify-between gap-2 items-center">
-                                <div className="nav-left h-10 rounded-full p-2">
+                                <div className="nav-left h-10 rounded-full p-2 ">
                                     <SwiperButtonNext>
                                         <BsArrowLeftCircle className='text-5xl cursor-pointer' />
                                     </SwiperButtonNext>

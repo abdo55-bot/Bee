@@ -20,6 +20,7 @@ const EventList = () => {
     const { dark } = useContext(DarkThemeContext);
     const [Events, setEvent] = useState([]);
     const {t}=useTranslation();
+    const {i18n}=useTranslation();
 
     useEffect(() => {
 
@@ -35,6 +36,13 @@ const EventList = () => {
         }
     }, [])
 
+    const [swiper, setSwiper] = useState(null)
+    useEffect(() => {
+      if (swiper) {
+        swiper.rtlTranslate = i18n?.dir() === 'rtl'
+      }
+    }, [swiper, i18n?.dir()])
+
     return (
         <div className={dark ? 'eventFeed flex flex-col bg-black py-5 relative'
             : 'eventFeed flex flex-col bg-white py-5 relative'}>
@@ -47,6 +55,7 @@ const EventList = () => {
                         navigation
                         pagination={{ clickable: true }}
                         scrollbar={{ draggable: true }}
+                        onSwiper={(swiper) => setSwiper(swiper)}
 
                         breakpoints={{
                             425: {
@@ -63,7 +72,7 @@ const EventList = () => {
                             },
                             // when window width is >= 992px
                             992: {
-                                slidesPerView: 4,
+                                slidesPerView: 3,
                                 spaceBetween: 30,
                                 width: 1200
                             },

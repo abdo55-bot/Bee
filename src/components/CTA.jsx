@@ -11,6 +11,8 @@ import { useTranslation } from "react-i18next";
 const CTA = () => {
 	const { dark } = useContext(DarkThemeContext);
 const {t} =useTranslation();
+const {i18n}=useTranslation();
+
 
 	return (
 		<div className="cta my-20 ">
@@ -24,15 +26,15 @@ const {t} =useTranslation();
 						<img className="md:w-fit" src="img/video.png" alt="" />
 					</div>
 					<div
-						className={`right h-auto  md:w-[40%] w-full text-center  md:text-right flex flex-col justify-between gap-4  py-6 `}
+						className={`right h-auto  md:w-[48%] w-full text-center  md:text-right flex flex-col justify-between gap-4  py-6 `}
 					>
 						<div
-							className={`leading-2 text-5xl font-normal ${
+							className={`leading-2 text-center  font-normal ${
 								dark ? "text-white" : "text-black"
-							} `}
+							} ${i18n.language== 'en' ?'text-5xl':'text-5xl'}`}
 						>
             						{t("DigitalMarketing")}						</div>
-						<div className="content flex flex-col gap-4 text-center mt-10 items-center md:items-end">
+									<div className={`content flex flex-col gap-4 text-center mt-10 ${i18n.language === 'ar' ? 'items-center' : 'items-end'}`}>
 							<div className="flex flex-row-reverse  justify-start gap-2 text-2xl   ">
 								<img
 									className="w-14 h-14 rounded-full "
@@ -53,7 +55,7 @@ const {t} =useTranslation();
 								</div>
 							</div>
 							<div
-								className={`text-xl font-light w-auto lg:w-[80%] mt-2 ${
+								className={`text-xl font-light w-auto  mt-2 ${
 									dark ? "text-grey" : "text-black"
 								}`}
 							>

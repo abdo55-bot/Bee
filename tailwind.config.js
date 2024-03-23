@@ -23,7 +23,9 @@ export default {
       'noto': ['Noto Sans Arabic', 'sans-serif']
     }
   },
-  plugins: [],
+  plugins: [
+    require('flowbite/plugin')
+  ],
   darkMode: 'class'
 }
 

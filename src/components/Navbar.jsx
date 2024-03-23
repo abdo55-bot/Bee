@@ -8,6 +8,8 @@ import { DarkThemeContext } from '../context/DarkTheme';
 import {  useAuth } from '../context/Auth.jsx';
 import '../styles/nav.css'
 import { useTranslation } from 'react-i18next';
+import { Dropdown } from 'flowbite-react';
+import { changeLanguage } from 'i18next';
 function classNames(...classes) {
     return classes.filter(Boolean).join(' ')
 }
@@ -21,7 +23,13 @@ const navigation = [
 const Navbar = () => {
     const { authUSer, setAuthUser, isLogged, setIsLogged } = useAuth();
     const { dark, setDark } = useContext(DarkThemeContext);
+    const {i18n}=useTranslation();
     
+
+    const langues=[
+        {code: 'en',lang:"English"},
+        {code: 'ar',lang:"Arabic"}
+    ]
 
 
     const logout = () => {
@@ -45,6 +53,10 @@ const Navbar = () => {
             window.removeEventListener('scroll', onscrol);
         }
     },[])
+
+    useEffect(()=>{
+        document.body.style.direction=i18n.dir();
+    },[i18n,i18n.language])
 
     const {t}=useTranslation();
 
@@ -109,6 +121,16 @@ const Navbar = () => {
                                                     onClick={logout}> تسجيل خروج</button>
 
                                         )}
+                                        <Dropdown label="Dropdown button" dismissOnClick={false} className='text-black '>
+                                            {langues.map((lang)=>{
+                                                return(
+<Dropdown.Item key={lang.code} onClick={()=>changeLanguage(lang.code)}>{lang.lang}</Dropdown.Item>
+                                                )
+                                            })}
+      
+     
+     
+    </Dropdown>
                                         <MdDarkMode className='cursor-pointer text-xl' onClick={() => setDark(!dark)} />
                                     </div>
                                 </Menu>
