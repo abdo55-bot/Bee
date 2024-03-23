@@ -62,7 +62,7 @@ const CourseList = () => {
                             },
                             // when window width is >= 992px
                             992: {
-                              slidesPerView: 3,
+                              slidesPerView: 3, 
                               spaceBetween: 30,
                               width: 1200
                             },

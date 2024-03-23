@@ -23,7 +23,7 @@ const navigation = [
 const Navbar = () => {
     const { authUSer, setAuthUser, isLogged, setIsLogged } = useAuth();
     const { dark, setDark } = useContext(DarkThemeContext);
-    const {i18n}=useTranslation();
+    const {i18n}=useTranslation(); 
     
 
     const langues=[

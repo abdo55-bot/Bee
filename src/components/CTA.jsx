@@ -31,7 +31,7 @@ const {i18n}=useTranslation();
 						<div
 							className={`leading-2 text-center  font-normal ${
 								dark ? "text-white" : "text-black"
-							} ${i18n.language== 'en' ?'text-5xl':'text-5xl'}`}
+							} ${i18n.language== 'en' ?'text-5xl':'text-5xl'}`} 
 						>
             						{t("DigitalMarketing")}						</div>
 									<div className={`content flex flex-col gap-4 text-center mt-10 ${i18n.language === 'ar' ? 'items-center' : 'items-end'}`}>

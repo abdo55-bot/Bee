@@ -32,7 +32,7 @@ const CTA2 = () => {
 						>
 							{t("DigitalMarketing")}
 						</div>
-						<div className={`content flex flex-col gap-4 text-center mt-10 ${i18n.language === 'ar' ? 'items-center' : 'items-end'}`}>
+						<div className={`content flex flex-col gap-4 text-center mt-10 ${i18n.language === 'ar' ? 'items-center' : 'items-end'}`}> 
 
 							<div className="flex flex-row-reverse justify-start gap-2 text-2xl">
 								<img

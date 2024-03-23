@@ -75,7 +75,7 @@ const EventList = () => {
                                 slidesPerView: 3,
                                 spaceBetween: 30,
                                 width: 1200
-                            },
+                            }, 
                         }}
                     >
                         <div className="header mt-2 absolute left-0 top-0 z-20 flex items-end sm:items-center 
