@@ -12,12 +12,15 @@ import { Link } from 'react-router-dom';
 import { useEffect } from 'react';
 import { useState } from 'react';
 import axios from 'axios';
+import { useTranslation } from 'react-i18next';
 
 
 
 const EventList = () => {
     const { dark } = useContext(DarkThemeContext);
     const [Events, setEvent] = useState([]);
+    const {t}=useTranslation();
+    const {i18n}=useTranslation();
 
     useEffect(() => {
 
@@ -33,6 +36,13 @@ const EventList = () => {
         }
     }, [])
 
+    const [swiper, setSwiper] = useState(null)
+    useEffect(() => {
+      if (swiper) {
+        swiper.rtlTranslate = i18n?.dir() === 'rtl'
+      }
+    }, [swiper, i18n?.dir()])
+
     return (
         <div className={dark ? 'eventFeed flex flex-col bg-black py-5 relative'
             : 'eventFeed flex flex-col bg-white py-5 relative'}>
@@ -45,6 +55,7 @@ const EventList = () => {
                         navigation
                         pagination={{ clickable: true }}
                         scrollbar={{ draggable: true }}
+                        onSwiper={(swiper) => setSwiper(swiper)}
 
                         breakpoints={{
                             425: {
@@ -61,10 +72,10 @@ const EventList = () => {
                             },
                             // when window width is >= 992px
                             992: {
-                                slidesPerView: 4,
+                                slidesPerView: 3,
                                 spaceBetween: 30,
                                 width: 1200
-                            },
+                            }, 
                         }}
                     >
                         <div className="header mt-2 absolute left-0 top-0 z-20 flex items-end sm:items-center 
@@ -83,8 +94,8 @@ const EventList = () => {
                                 </div>
                             </div>
                             <div className="right">
-                                <div className="leading-5 text-2xl md:text-5xl font-bold hover:underline">
-                                    <Link to="/eventFeed">   شاهد كل الاحداث </Link>
+                                <div className="leading-5 text-2xl text-end md:text-5xl font-bold hover:underline">
+                                    <Link to="/eventFeed">   {t('Watchalltheevents')} </Link>
                                 </div>
                             </div>
                         </div>

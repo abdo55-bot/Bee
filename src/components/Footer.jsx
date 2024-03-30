@@ -3,9 +3,11 @@ import { Link } from 'react-router-dom'
 import { FaTwitterSquare, FaTiktok, FaFacebookSquare, FaLinkedin, FaYoutube, FaInstagramSquare, FaSquareYoutube } from '../helpers/icons';
 import { useContext } from 'react';
 import { DarkThemeContext } from '../context/DarkTheme';
+import { useTranslation } from 'react-i18next';
 
 const Footer = () => {
   const { dark} = useContext(DarkThemeContext);
+  const {t}=useTranslation();
   const handleScrollToTop = () => {
     window.scrollTo({
       top: 0,
@@ -30,18 +32,18 @@ const Footer = () => {
 
           <div className="flex justify-center items-center ">
             <Link  to="/terms" className='hover:underline'>
-              <div className="text-3xl ">سياسة الخصوصية</div>
+              <div className="text-3xl ">{t('privacypolicy')}</div>
             </Link>
           </div>
           <div className="we">
             <Link className='hover:underline'>
-              <div className="text-3xl ">من نحن</div>
+              <div className="text-3xl "> {t('whoarewe')}</div>
             </Link>
           </div>
         
         </div>
         <div className='mt-5 text-center ' >
-            <p className='text-sm md:text-center sm:pr-6 cursor-pointer' onClick={handleScrollToTop}>Copyright<span className='text-base font-bold'>&copy;</span> All Reserved Rights <span className='font-semibold'>Bee </span></p>
+            <p className='text-sm md:text-center sm:pr-6 cursor-pointer' onClick={handleScrollToTop}>{t('Copyright')}<span className='text-base font-bold'>&copy;</span> {t('AllReservedRights')} <span className='font-semibold'>Bee </span></p>
           </div>
       </div>
     </div>

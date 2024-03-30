@@ -4,9 +4,12 @@ import { Link } from "react-router-dom";
 import { Checkbox } from "@mui/material";
 import BookmarkBorderIcon from "@mui/icons-material/BookmarkBorder";
 import BookmarkIcon from "@mui/icons-material/Bookmark";
+import { useTranslation } from "react-i18next";
 
 const CTA2 = () => {
 	const { dark } = useContext(DarkThemeContext);
+	const {t}=useTranslation();
+	const{i18n}=useTranslation();
 
 	return (
 		<div className="cta my-20 ">
@@ -20,16 +23,17 @@ const CTA2 = () => {
 						<img className="md:w-fit" src="img/video.png" alt="" />
 					</div>
 					<div
-						className={`right h-auto  md:w-[40%] w-full text-center md:text-right flex flex-col justify-between gap-4  py-6 `}
+						className={`right h-auto  md:w-[48%] w-full text-center md:text-right flex flex-col justify-between gap-4  py-6 `}
 					>
 						<div
-							className={`leading-5 text-5xl font-normal ${
+							className={`leading-2 text-center text-3xl font-normal ${
 								dark ? "text-white" : "text-black"
-							}`}
+							} ${i18n.language== 'en' ?'text-3xl':'text-5xl'}`}
 						>
-							التسويق الرقمى
+							{t("DigitalMarketing")}
 						</div>
-						<div className="content flex flex-col gap-4 text-right mt-10 items-center md:items-end">
+						<div className={`content flex flex-col gap-4 text-center mt-10 ${i18n.language === 'ar' ? 'items-center' : 'items-end'}`}> 
+
 							<div className="flex flex-row-reverse justify-start gap-2 text-2xl">
 								<img
 									className="w-14 h-14 rounded-full"
@@ -37,7 +41,7 @@ const CTA2 = () => {
 									alt=""
 								/>
 								<div className="info flex justify-center flex-col ">
-									<div className="name text-lg font-semibold">احمد محموج</div>
+									<div className="name text-lg font-semibold"> {t('Ahmedmahmoud')}</div>
 									<div
 										className={
 											dark
@@ -45,24 +49,23 @@ const CTA2 = () => {
 												: "title text-sm text-black"
 										}
 									>
-										خبير فى التسويق الالكترونى
+										{t('Expertinelectronicmarketing')}   
 									</div>
 								</div>
 							</div>
 							<div
-								className={`text-xl font-light w-auto lg:w-[80%] mt-2 ${
+								className={`text-xl font-light w-auto  mt-2 ${
 									dark ? "text-grey" : "text-black"
 								}`}
 							>
-								احترف التسويق الرقمى و عزز مسارك المهنى بامتلاك المهارة الاكثر
-								طلبا فى سوق العمل
+								{t('MasterdigitalmarketingandenhanceyourcareerpathbypossessingthemostskillsDemandinthelabormarket')}
 							</div>
 							<div className="buttons flex flex-row-reverse gap-5 text-center justify-center w-full mt-2 ">
 								<Link
 									to="/eventDetails/1"
 									className="rounded-full leading-10 text-white bg-primary font-medium  px-12 shadow-main flex items-center hover:scale-105 duration-150"
 								>
-									اذهب الى الدورة
+									{t('Gotothecourse')}
 								</Link>
 
 								<Checkbox
