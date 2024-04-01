@@ -34,7 +34,7 @@ const Course = ({
 			</div>
 			<img src={img} alt="events/img" className="rounded-md  cursor-pointer" />
 			<div
-				className={`content flex flex-col justify-between items-end px-4 text-right 
+				className={`content py-3 flex flex-col justify-between items-end px-4 text-right 
          gap-2 ${dark ? "text-grey" : "text-black bg-[#F5F5F5] rounded-b-md"} `}
 			>
 				<div
