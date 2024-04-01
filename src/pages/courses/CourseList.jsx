@@ -71,17 +71,34 @@ const CourseList = () => {
                         <div className="header mt-2 absolute left-0 top-0 z-20 flex items-center sm:items-center 
                         justify-between w-full mb-10">
                             <div className="left navs flex  justify-between gap-2 items-center">
-                                <div className="nav-left h-10 rounded-full p-2 ">
-                                    <SwiperButtonNext>
-                                        <BsArrowLeftCircle className='text-5xl cursor-pointer' />
-                                    </SwiperButtonNext>
-                                </div>
-                                <div className="nav-left h-10  rounded-full p-2">
+                            {i18n.dir()=="rtl" ?  <> <div className="nav-left  h-10 rounded-full p-2">
                                     <SwiperButtonPrev>
 
                                         <BsArrowRightCircle className='text-5xl cursor-pointer' />
                                     </SwiperButtonPrev>
                                 </div>
+                                <div className="nav-left h-10 rounded-full p-2">
+                                 
+                                <SwiperButtonNext>
+                                    <BsArrowLeftCircle className='text-5xl cursor-pointer' />
+                                </SwiperButtonNext>
+                            </div>
+                            </>
+                                :<>
+                                
+                                <div className="nav-left h-10 rounded-full p-2">
+                                 
+                                 <SwiperButtonNext>
+                                     <BsArrowLeftCircle className='text-5xl cursor-pointer' />
+                                 </SwiperButtonNext>
+                             </div>
+                             <div className="nav-left  h-10 rounded-full p-2">
+                                 <SwiperButtonPrev>
+
+                                     <BsArrowRightCircle className='text-5xl cursor-pointer' />
+                                 </SwiperButtonPrev>
+                             </div>
+                                </>}
                             </div>
                             <div className="right">
                                 <div className="leading-8 text-2xl md:text-5xl  font-bold hover:underline text-end">

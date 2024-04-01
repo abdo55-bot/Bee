@@ -43,6 +43,8 @@ const EventList = () => {
       }
     }, [swiper, i18n?.dir()])
 
+
+
     return (
         <div className={dark ? 'eventFeed flex flex-col bg-black py-5 relative'
             : 'eventFeed flex flex-col bg-white py-5 relative'}>
@@ -81,17 +83,36 @@ const EventList = () => {
                         <div className="header mt-2 absolute left-0 top-0 z-20 flex items-end sm:items-center 
                         justify-between w-full mb-10">
                             <div className="left navs flex w-[100px] justify-between gap-2 items-center">
-                                <div className="nav-left h-10 rounded-full p-2">
-                                    <SwiperButtonNext>
-                                        <BsArrowLeftCircle className='text-5xl cursor-pointer' />
-                                    </SwiperButtonNext>
-                                </div>
-                                <div className="nav-left  h-10 rounded-full p-2">
+
+                            {i18n.dir()=="rtl" ?  <> <div className="nav-left  h-10 rounded-full p-2">
                                     <SwiperButtonPrev>
 
                                         <BsArrowRightCircle className='text-5xl cursor-pointer' />
                                     </SwiperButtonPrev>
                                 </div>
+                                <div className="nav-left h-10 rounded-full p-2">
+                                 
+                                <SwiperButtonNext>
+                                    <BsArrowLeftCircle className='text-5xl cursor-pointer' />
+                                </SwiperButtonNext>
+                            </div>
+                            </>
+                                :<>
+                                
+                                <div className="nav-left h-10 rounded-full p-2">
+                                 
+                                 <SwiperButtonNext>
+                                     <BsArrowLeftCircle className='text-5xl cursor-pointer' />
+                                 </SwiperButtonNext>
+                             </div>
+                             <div className="nav-left  h-10 rounded-full p-2">
+                                 <SwiperButtonPrev>
+
+                                     <BsArrowRightCircle className='text-5xl cursor-pointer' />
+                                 </SwiperButtonPrev>
+                             </div>
+                                </>}
+                              
                             </div>
                             <div className="right">
                                 <div className="leading-5 text-2xl text-end md:text-5xl font-bold hover:underline">
