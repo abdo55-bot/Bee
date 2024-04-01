@@ -34,7 +34,7 @@ const CTA2 = () => {
 						</div>
 						<div className={`content flex flex-col gap-4 text-center mt-10 ${i18n.language === 'ar' ? 'items-center' : 'items-end'}`}> 
 
-							<div className="flex flex-row-reverse justify-start gap-2 text-2xl">
+						<div className={`flex   justify-center  gap-2 text-2xl  w-[100%] `}>
 								<img
 									className="w-14 h-14 rounded-full"
 									src="img/video.png"

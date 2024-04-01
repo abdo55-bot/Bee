@@ -20,9 +20,9 @@ const {i18n}=useTranslation();
 				<div
 					className={`flex justify-between items-center flex-col gap-14 sm:gap-8  ${
 						dark ? "bg-lightBlack" : "bg-lightGrey"
-					} md:flex-row  items-start md:gap-3  pr-0 md:pr-4 rounded-xl`}
+					} md:flex-row  items-start md:gap-3   md:pr-4 rounded-xl `}
 				>
-					<div className="left md:w-[60%] w-full ">
+					<div className="left md:w-[60%] w-full">
 						<img className="md:w-fit" src="img/video.png" alt="" />
 					</div>
 					<div
@@ -34,8 +34,8 @@ const {i18n}=useTranslation();
 							} ${i18n.language== 'en' ?'':'text-5xl'}`} 
 						>
             						{t("DigitalMarketing")}						</div>
-									<div className={`content flex flex-col gap-4 text-center mt-10 ${i18n.language === 'ar' ? 'items-center' : 'items-end'}`}>
-							<div className="flex flex-row-reverse  justify-start gap-2 text-2xl   ">
+									<div className={`content flex flex-col gap-4 text-center mt-10 ${i18n.language === 'ar' ? 'items-center' : 'items-end'} `}>
+							<div className={`flex   justify-center  gap-2 text-2xl  w-[100%] `}>
 								<img
 									className="w-14 h-14 rounded-full "
 									src="img/video.png"
