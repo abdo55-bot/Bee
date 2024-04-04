@@ -15,12 +15,12 @@ const CTA2 = () => {
 		<div className="cta my-20 ">
 			<div className="container">
 				<div
-					className={`flex justify-between items-center flex-col gap-14 sm:gap-8  ${
+					className={`flex justify-between  flex-col gap-14 sm:gap-8  ${
 						dark ? "bg-lightBlack" : "bg-lightGrey"
-					} md:flex-row  items-start md:gap-3  pr-0 md:pr-4 rounded-xl`}
+					} md:flex-row   md:gap-3  rounded-xl`}
 				>
-					<div className="left md:w-[60%] w-full ">
-						<img className="md:w-fit" src="img/video.png" alt="" />
+					<div className="left md:w-[60%] w-full min-h-full ">
+						<img className="md:w-fit h-full" src="img/video.png" alt="" />
 					</div>
 					<div
 						className={`right h-auto  md:w-[48%] w-full text-center md:text-right flex flex-col justify-between gap-4  py-6 `}
