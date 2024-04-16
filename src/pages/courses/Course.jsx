@@ -74,6 +74,9 @@ const Course = ({
 					<Link
 						to="/courseDetails"
 						className="bg-primary rounded-full py-1 font-normal px-5 shadow text-white  shadow-black hover:scale-105 duration-150"
+						onClick={() => {
+							window.scroll(0, 0);
+						  }}
 					>
 						احجز الان
 					</Link>

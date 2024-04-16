@@ -73,7 +73,7 @@ const CourseDetails = () => {
             </div>
 
           </div>
-          <div className="col-md-9 h-[100vh] mt-[25rem] sm:mt-0">
+          <div className="col-md-9 mt-[25rem] sm:mt-0">
             <ReactPlayer width={'100%'} url='https://www.youtube.com/watch?v=LXb3EKWsInQ' />
             <div className="address mt-5 flex gap-2 flex-row-reverse items-center">
               <img src="img/video.png" className='w-24 h-24 rounded-full' alt="" />
@@ -89,7 +89,7 @@ const CourseDetails = () => {
           <div className="col-md-3"></div>
           <div className="col-md-9">
 
-            <div className={`event-details text-right mb-3 ring-2
+            <div className={`event-details text-right mb-3 ring-2 mt-3
                          ${dark ? `ring-white bg-lightBlack` : `ring-sky-200 bg-lightGrey`} 
                          rounded-md px-3 py-2 w-full`}>
               وصف الكورس    وصف الكورس
