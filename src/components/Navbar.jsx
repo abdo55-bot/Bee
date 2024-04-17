@@ -104,7 +104,7 @@ const Navbar = () => {
                                                 sm:inset-auto  sm:pr-0"
               >
                 <Menu as="div" className=" ">
-                  <div className="left w-[220px] sm:w-auto flex gap-5 text-sm md:text-xl justify-between items-center">
+                  <div className="left w-[220px] hide sm:w-auto flex gap-5 text-sm md:text-xl justify-between items-center">
                     {!isLogged ? (
                       <>
                         <Link to="/login" className="rounded-md p-2 md:p-1">
@@ -112,7 +112,7 @@ const Navbar = () => {
                         </Link>
                         <Link
                           to="/register"
-                          className={`flex items-center justify-center text-lg font-semibold rounded-md px-4 md:p-1 border ${
+                          className={`flex items-center  justify-center text-lg font-semibold rounded-md px-4 md:p-1 border ${
                             dark ? "border-white" : "border-black"
                           } `}
                         >
@@ -132,7 +132,7 @@ const Navbar = () => {
                     )}
                     <Dropdown
                       label="switch language"
-                      className={`flex items-center  justify-center text-black  rounded-md border ${
+                      className={`flex items-center   justify-center text-black  rounded-md border ${
                         dark ? "border-white" : "border-black"
                       } `}
                       dismissOnClick={false}
@@ -156,8 +156,54 @@ const Navbar = () => {
             </div>
           </div>
 
-          <Disclosure.Panel className="sm:hidden">
-            <div className="space-y-1 px-2 pb-3 pt-2">
+          <Disclosure.Panel className="sm:hidden ">
+            <div className="space-y-1 px-2 mx-auto flex-col items-center justify-center text-center pb-3 pt-2">
+            <Dropdown
+                      label="switch language"
+                      className={`flex items-center   justify-center text-black  rounded-md border ${
+                        dark ? "border-white" : "border-black"
+                      } `}
+                      dismissOnClick={false}
+                      style={{
+                        width: '100%',
+                        margin:'0 auto',
+                      }}
+                    >
+                      {langues.map((lang) => (
+                        <Dropdown.Item
+                          key={lang.code}
+                          onClick={() => changeLanguage(lang.code)}
+                        >
+                          {lang.lang}
+                        </Dropdown.Item>
+                      ))}
+                    </Dropdown>
+                    {!isLogged ? (
+                      <>
+                        <Link to="/login" className="rounded-md p-2 md:p-1">
+                          {t("login")}
+                        </Link>
+                        <Link
+                          to="/register"
+                          className={`flex items-center   justify-center text-lg font-semibold rounded-md px-4 md:p-1 border ${
+                            dark ? "border-white" : "border-black"
+                          } `}
+                        >
+                          {t("createaccount")}
+                        </Link>
+                      </>
+                    ) : (
+                      <button
+                        className={`rounded-md p-2 md:p-1 border ${
+                          dark ? "border-white" : "border-black"
+                        } `}
+                        onClick={logout}
+                      >
+                        {" "}
+                        تسجيل خروج
+                      </button>
+                    )}
+
               {navigation.map((item) => (
                 <Link
                   key={item.name}

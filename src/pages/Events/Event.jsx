@@ -72,7 +72,7 @@ const Event = ({
 				</div>
 				<div className="reserve flex justify-center items-center w-full py-5 hover:scale-105 duration-150">
 					<Link
-						to="/eventDetails"
+						to="/eventDetails/1"
 						className="bg-primary rounded-full py-1 font-normal px-5 shadow text-white  shadow-black"
 					>
 						احجز الان

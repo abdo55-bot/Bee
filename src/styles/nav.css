@@ -22,3 +22,9 @@
        width: 280px !important;
     }
 }
+
+@media screen and (max-width:550px) {
+    .hide{
+       display: none !important;
+    }
+}
